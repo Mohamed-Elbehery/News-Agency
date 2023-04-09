@@ -1,0 +1,64 @@
+/*! Variables */
+:root {
+  --body-background: #2b3347;
+}
+/*! Global Rules */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+body {
+  background-color: var(--body-background);
+}
+
+/*! Header Start */
+header {
+  width: 80%;
+  margin: 0 auto;
+  padding: 1.25rem;
+  border-bottom: 1px solid gray;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header div a img {
+  width: 35%;
+  background-color: inherit;
+  filter: invert(100%) contrast(3);
+}
+
+header nav ul {
+  display: flex;
+  align-items: center;
+}
+
+header nav ul li {
+  margin-right: 1rem;
+  font-weight: bold;
+}
+
+header nav ul li button {
+  transition: 0.25s;
+}
+
+header nav ul li:hover button {
+  color: lightgray;
+}
