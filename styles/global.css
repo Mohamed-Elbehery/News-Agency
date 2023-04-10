@@ -31,7 +31,6 @@ button {
 body {
   background-color: var(--main-color);
 }
-
 /*! Header Start */
 header {
   width: var(--sections-width);
