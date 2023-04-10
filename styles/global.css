@@ -2,7 +2,8 @@
 :root {
   --main-color: #2b3347;
   --secondary-color: rgb(146, 146, 146);
-  --white: white;
+  --light: white;
+  --sections-width: 80%;
 }
 /*! Global Rules */
 * {
@@ -10,7 +11,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
-  color: white;
+  color: var(--light);
 }
 
 a {
@@ -32,10 +33,10 @@ body {
 
 /*! Header Start */
 header {
-  width: 80%;
+  width: var(--sections-width);
   margin: 0 auto;
   padding: 1.25rem;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid var(--secondary-color);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -71,7 +72,7 @@ header div:nth-child(2) ul li:hover button {
 
 /*! News Section Start */
 section:has(.news) {
-  width: 80%;
+  width: var(--sections-width);
   margin: 0 auto;
   padding: 3rem 0;
 }
@@ -108,19 +109,20 @@ section .news p {
 
 section .news div:has(img) {
   overflow: hidden;
+  border-radius: 0.5rem;
 }
 
 section .news img {
   width: 100%;
   aspect-ratio: 1.5/1;
-  border-radius: 0.5rem;
   transition: 0.3s;
+  border-radius: 0.5rem;
 }
 
 section .news > div:hover img {
   transform: rotate(-4deg) scale(1.125);
 }
-/* Media Queries */
+/*! Media Queries */
 @media screen and (max-width: 911px) {
   header {
     flex-direction: column;

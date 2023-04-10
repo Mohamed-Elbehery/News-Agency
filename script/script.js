@@ -10,7 +10,7 @@ let category;
 //! Fetching the API and Displaying the Data in HTML
 const getNews = (countryCode, category) => {
   newsData = [];
-  if (!category) category = "health";
+  if (!category) category = "health"; //* if the user didn't choose a category it's gonna be "health" as default
   fetch(
     `https://newsapi.org/v2/top-headlines?country=${countryCode}&category=${category}&apiKey=0fb7dc41d309403bacd4bfcf8c8b854d`
   )
@@ -23,9 +23,10 @@ const getNews = (countryCode, category) => {
     .then(() => {
       newsData.forEach((ele) => {
         newsDiv.innerHTML += `<div>
+        <a href="${ele.url}" target="_blank">
         <h4>${ele.title}</h4>
-        <div><img src="${ele.urlToImage}" /></div>
-        <p>${ele.description}</p>
+        <div><img src="${ele.urlToImage}" alt="${ele.author} Article" /></div>
+        <p>${ele.description || "There's no Description"}</p></a>
       </div>`;
       });
     });
