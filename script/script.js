@@ -19,7 +19,7 @@ const getNews = (countryCode, category) => {
     .then((data) => {
       data.articles?.forEach((element) => newsData.push(element));
     })
-    //* Generating the New Data as a HTML Code and Adding it to the News Section
+    //* Generating the New Data as a HTML Code and Adding it to the News Div inside the News Section
     .then(() => {
       newsData.forEach((ele) => {
         newsDiv.innerHTML += `<div>
