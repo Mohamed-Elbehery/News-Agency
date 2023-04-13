@@ -48,25 +48,21 @@ header div a img {
   filter: invert(100%) contrast(3);
 }
 
-header nav ul,
-header div:nth-child(2) ul {
+header div:has(ul) ul {
   display: flex;
   align-items: center;
 }
 
-header nav ul li,
-header div:nth-child(2) ul li {
+header div:has(ul li) li {
   margin-right: 1.125rem;
   font-weight: bold;
 }
 
-header nav ul li button,
-header div:nth-child(2) ul li button {
+header div:has(ul li button) {
   transition: 0.3s ease-out;
 }
 
-header nav ul li:hover button,
-header div:nth-child(2) ul li:hover button {
+header div:has(ul) li:hover button {
   color: var(--secondary-color);
 }
 
